@@ -16,7 +16,12 @@ app.use(helmet());
 
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
-const mongoDB = require("../local_library");
+
+// Dev db
+const dev_db_url = require("../local_library");
+
+// Prod db
+const mongoDB = process.env.MONGODB_URI || dev_db_url;
 
 main().catch((err) => console.log(err));
 async function main() {

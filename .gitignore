@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Populate script
+populatedb.js
+
+# Env variables
+.env
